@@ -5,7 +5,7 @@
       "name": "Reading Story Book",
       "time": "60",
       "age": "12 - 25",
-      "button": "Add to List",
+      "button": "Add Activity",
       "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia "
    },
    {
@@ -14,7 +14,7 @@
       "name": "Academic Books",
       "time": "400",
       "age": "18 - 22",
-      "button": "Add to List",
+      "button": "Add Activity",
       "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia"
    },
    {
@@ -23,7 +23,7 @@
       "name": "Read magazine",
       "time": "40",
       "age": "16 - 40",
-      "button": "Add to List",
+      "button": "Add Activity",
       "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia"
    },
    {
@@ -32,7 +32,7 @@
       "name": "News Paper Reading",
       "time": "50",
       "age": "17 - 60",
-      "button": "Add to List",
+      "button": "Add Activity",
       "about" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia" 
    },
    {
@@ -41,7 +41,7 @@
       "name": "Writting Blog",
       "time": "80",
       "age": "25 - 40",
-      "button": "Add to List",
+      "button": "Add Activity",
       "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia"
    },
    {
@@ -50,7 +50,7 @@
       "name": "Teaching",
       "time": "180",
       "age": "20 - 34",
-      "button": "Add to List",
+      "button": "Add Activity",
       "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia "
    }
 ]

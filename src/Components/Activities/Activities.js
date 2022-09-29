@@ -25,6 +25,7 @@ const Activities = () => {
     
     
     const addToCart = (id) =>{
+        id.button = "Added Activities";
         let addMinutes = [...time, id]
         settime(addMinutes);
     }
@@ -37,7 +38,7 @@ const Activities = () => {
                     <h1 className='text-3xl font-bold text-green-800 text-center mt-4'>Our Learning Activities</h1>
                     <p className='text-center text-gray-400 text-sm'>
                         <FontAwesomeIcon icon={faBell}></FontAwesomeIcon>
-                        <span>Learning is the best way to make a perfect man.</span>
+                        <span className='ml-2'>Learning is the best way to make a perfect man.</span>
                     </p>
                     <div className='grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 gap-4 mx-4 my-8'>
                         {

@@ -2,8 +2,12 @@ import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 import profile from './../img/profile.jpg';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const AsideCart = (props) => {
+
+    const notify = () => toast("Wow !!! Activity Complete");
     let totalMin = 0;
     for(const min of props.totalTime){
         totalMin = totalMin + parseInt(min.time);
@@ -72,7 +76,8 @@ const AsideCart = (props) => {
                     </div>
 
                     <div className='mt-2 mb-8 lg:mt-8'>
-                        <button className='btn bg-green-800 glass hover:bg-green-900'>Activities Complete</button>
+                        <button onClick={notify} className='btn bg-green-800 glass hover:bg-green-900'>Activities Complete</button>
+                        <ToastContainer />
                     </div>
                 </div>
 
