@@ -70,7 +70,7 @@ const AsideCart = (props) => {
                 <div className='flex flex-col justify-center items-center'>
                     <div className='mt-2 lg:mt-8'>
                         <h2 className='text-2xl my-1 text-green-800 font-semibold'>Add A Break</h2>
-                        <div className='bg-green-700 p-2 py-4 hover:bg-green-700 glass rounded-xl font-semibold text-white flex justify-around items-center'>
+                        <div className='bg-green-700 p-2 py-4 hover:bg-green-700 glass rounded-xl font-semibold text-white shadow-lg flex justify-around items-center'>
 
                             {
                                 breakTime.map(times => <BreakBtn key={times.id} breakTimeAdd = {breakTimeAdd} times = {times}></BreakBtn>)
@@ -81,11 +81,11 @@ const AsideCart = (props) => {
 
                     <div className='mt-2 lg:mt-8'>
                         <h2 className='text-sm my-1 text-green-800 font-semibold'>Reading Activities Details</h2>
-                        <div className='bg-green-700 p-2 py-4 hover:bg-green-700 glass rounded-xl font-semibold text-white flex justify-around items-center'>
+                        <div className='bg-green-700 p-2 py-4 hover:bg-green-700 glass shadow-lg rounded-xl font-semibold text-white flex justify-around items-center'>
                             <h2 className='text-sm'>Reading Time : </h2>
                             <h5 className='text-sm'><span>{totalMin}</span> Minutes</h5>
                         </div>
-                        <div className='bg-green-700 mt-4 p-2 py-4 hover:bg-green-700 glass rounded-xl font-semibold text-white flex justify-around items-center'>
+                        <div className='bg-green-700 mt-4 p-2 py-4 hover:bg-green-700 glass rounded-xl font-semibold text-white shadow-lg flex justify-around items-center'>
                             <h2 className='text-sm'>Breaking Time : </h2>
                             <h5 className='text-sm'><span>{AddBreakTime}</span> Minutes</h5>
                         </div>
