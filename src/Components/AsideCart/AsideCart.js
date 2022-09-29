@@ -1,9 +1,10 @@
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import profile from './../img/profile.jpg';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import BreakBtn from '../BreakBtn/BreakBtn';
 
 const AsideCart = (props) => {
 
@@ -13,9 +14,23 @@ const AsideCart = (props) => {
         totalMin = totalMin + parseInt(min.time);
     }
 
-    const [breakTime, setBreakTime] = useState(0);
+    const breakTime = [
+        {id: 0, time: 15},
+        {id: 1, time: 25},
+        {id: 2, time: 35},
+        {id: 3, time: 45}
+    ];
 
+    const [AddBreakTime, setAddBreakTime] = useState(0);
+    const breakTimeAdd = (getTime) => {
+        setAddBreakTime(getTime);
+        localStorage.setItem("time", getTime);
 
+    }
+    useEffect(() => {
+        const getLocalStoreTime = localStorage.getItem('time');
+        setAddBreakTime(getLocalStoreTime);
+    },[])
     return (
         <aside className='sticky top-0'>
             <div className='flex flex-col sm:flex-row lg:flex-col items-center pt-4 justify-around'>
@@ -56,10 +71,11 @@ const AsideCart = (props) => {
                     <div className='mt-2 lg:mt-8'>
                         <h2 className='text-2xl my-1 text-green-800 font-semibold'>Add A Break</h2>
                         <div className='bg-green-700 p-2 py-4 hover:bg-green-700 glass rounded-xl font-semibold text-white flex justify-around items-center'>
-                            <button className='btn bg-white  border-none text-green-500 hover:bg-green-200 btn-sm mx-2 btn-circle'><span>15</span><sub>s</sub></button>
-                            <button className='btn bg-white border-none text-green-500 hover:bg-green-200 btn-sm mx-2 btn-circle'><span>30</span><sub>s</sub></button>
-                            <button className='btn bg-white border-none text-green-500 hover:bg-green-200 btn-sm mx-2 btn-circle'><span>45</span><sub>s</sub></button>
-                            <button className='btn bg-white border-none text-green-500 hover:bg-green-200 btn-sm mx-2 btn-circle'><span>60</span><sub>s</sub></button>
+
+                            {
+                                breakTime.map(times => <BreakBtn key={times.id} breakTimeAdd = {breakTimeAdd} times = {times}></BreakBtn>)
+                            }
+                            
                         </div>
                     </div>
 
@@ -71,7 +87,7 @@ const AsideCart = (props) => {
                         </div>
                         <div className='bg-green-700 mt-4 p-2 py-4 hover:bg-green-700 glass rounded-xl font-semibold text-white flex justify-around items-center'>
                             <h2 className='text-sm'>Breaking Time : </h2>
-                            <h5 className='text-sm'><span>100</span> Minutes</h5>
+                            <h5 className='text-sm'><span>{AddBreakTime}</span> Minutes</h5>
                         </div>
                     </div>
 
