@@ -1,9 +1,17 @@
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
+import React, { useState } from 'react';
 import profile from './../img/profile.jpg';
 
-const AsideCart = () => {
+const AsideCart = (props) => {
+    let totalMin = 0;
+    for(const min of props.totalTime){
+        totalMin = totalMin + parseInt(min.time);
+    }
+
+    const [breakTime, setBreakTime] = useState(0);
+
+
     return (
         <aside className='sticky top-0'>
             <div className='flex flex-col sm:flex-row lg:flex-col items-center pt-4 justify-around'>
@@ -45,9 +53,9 @@ const AsideCart = () => {
                         <h2 className='text-2xl my-1 text-green-800 font-semibold'>Add A Break</h2>
                         <div className='bg-green-700 p-2 py-4 hover:bg-green-700 glass rounded-xl font-semibold text-white flex justify-around items-center'>
                             <button className='btn bg-white  border-none text-green-500 hover:bg-green-200 btn-sm mx-2 btn-circle'><span>15</span><sub>s</sub></button>
-                            <button className='btn bg-white border-none text-green-500 hover:bg-green-200 btn-sm mx-2 btn-circle'><span>15</span><sub>s</sub></button>
-                            <button className='btn bg-white border-none text-green-500 hover:bg-green-200 btn-sm mx-2 btn-circle'><span>15</span><sub>s</sub></button>
-                            <button className='btn bg-white border-none text-green-500 hover:bg-green-200 btn-sm mx-2 btn-circle'><span>15</span><sub>s</sub></button>
+                            <button className='btn bg-white border-none text-green-500 hover:bg-green-200 btn-sm mx-2 btn-circle'><span>30</span><sub>s</sub></button>
+                            <button className='btn bg-white border-none text-green-500 hover:bg-green-200 btn-sm mx-2 btn-circle'><span>45</span><sub>s</sub></button>
+                            <button className='btn bg-white border-none text-green-500 hover:bg-green-200 btn-sm mx-2 btn-circle'><span>60</span><sub>s</sub></button>
                         </div>
                     </div>
 
@@ -55,7 +63,7 @@ const AsideCart = () => {
                         <h2 className='text-sm my-1 text-green-800 font-semibold'>Reading Activities Details</h2>
                         <div className='bg-green-700 p-2 py-4 hover:bg-green-700 glass rounded-xl font-semibold text-white flex justify-around items-center'>
                             <h2 className='text-sm'>Reading Time : </h2>
-                            <h5 className='text-sm'><span>200</span> Minutes</h5>
+                            <h5 className='text-sm'><span>{totalMin}</span> Minutes</h5>
                         </div>
                         <div className='bg-green-700 mt-4 p-2 py-4 hover:bg-green-700 glass rounded-xl font-semibold text-white flex justify-around items-center'>
                             <h2 className='text-sm'>Breaking Time : </h2>

@@ -18,6 +18,17 @@ const Activities = () => {
     }, [])
 
 
+    const [time, settime] = useState([]);
+    
+    useEffect(() => {
+    },[])
+    
+    
+    const addToCart = (id) =>{
+        let addMinutes = [...time, id]
+        settime(addMinutes);
+    }
+
 
     return (
         <section>
@@ -30,12 +41,12 @@ const Activities = () => {
                     </p>
                     <div className='grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 gap-4 mx-4 my-8'>
                         {
-                            activities.map(activity => <Activity key= {activity.id} activity = {activity}></Activity>)
+                            activities.map(activity => <Activity key= {activity.id} addToCart = {addToCart} activity = {activity}></Activity>)
                         }
                     </div>
                 </div>
                 <div className='w-full lg:w-1/5 bg-green-100'>
-                    <AsideCart></AsideCart> 
+                    <AsideCart totalTime = {time}></AsideCart> 
                 </div>
             </div>
         </section>
