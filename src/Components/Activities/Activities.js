@@ -4,6 +4,7 @@ import './Activities.css';
 import AsideCart from '../AsideCart/AsideCart';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell } from '@fortawesome/free-solid-svg-icons';
+import Blog from '../Blog/Blog';
 
 
 
@@ -45,6 +46,8 @@ const Activities = () => {
                             activities.map(activity => <Activity key= {activity.id} addToCart = {addToCart} activity = {activity}></Activity>)
                         }
                     </div>
+
+                    <Blog></Blog>
                 </div>
                 <div className='w-full lg:w-1/5 bg-green-100'>
                     <AsideCart totalTime = {time}></AsideCart> 
