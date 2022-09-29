@@ -14,7 +14,7 @@ const Activity = (props) => {
                     <p className='text-gray-400'>Age: <span>{age}</span> Years</p>
                     <p className='text-xs text-gray-400'>{about}</p>
                     <div className="card-actions justify-end">
-                    <button className="btn btn-sm bg-green-700 glass border-none hover:bg-green-800 btn-wide">{button}</button>
+                    <button className="btn btn-block btn-sm bg-green-700 glass border-none hover:bg-green-800">{button}</button>
                     </div>
                 </div>
             </div>

@@ -21,20 +21,20 @@ const Activities = () => {
 
     return (
         <section>
-            <div className="flex justify-between">
-                <div className='w-4/5'>
+            <div className="flex flex-col-reverse lg:flex-row  justify-between">
+                <div className='w-full lg:w-4/5'>
                     <h1 className='text-3xl font-bold text-green-800 text-center mt-4'>Our Learning Activities</h1>
                     <p className='text-center text-gray-400 text-sm'>
                         <FontAwesomeIcon icon={faBell}></FontAwesomeIcon>
                         <span>Learning is the best way to make a perfect man.</span>
                     </p>
-                    <div className='grid lg:grid-cols-3 sm:grid-cols-1 md:grid-cols-2 gap-4 mx-4 my-8'>
+                    <div className='grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 gap-4 mx-4 my-8'>
                         {
                             activities.map(activity => <Activity key= {activity.id} activity = {activity}></Activity>)
                         }
                     </div>
                 </div>
-                <div className='w-1/5 bg-green-100'>
+                <div className='w-full lg:w-1/5 bg-green-100'>
                     <AsideCart></AsideCart> 
                 </div>
             </div>
