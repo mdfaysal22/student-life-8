@@ -41,14 +41,28 @@ const AsideCart = () => {
                 <div className='mt-8 shadow-lg'>
                     <h2 className='text-2xl my-1 text-green-800 font-semibold'>Add A Break</h2>
                     <div className='bg-green-700 p-2 py-4 hover:bg-green-700 glass rounded-xl font-semibold text-white flex justify-around items-center'>
-                        <button className='btn bg-white border-none text-green-500 hover:bg-green-200 btn-sm mx-2 btn-circle'><span>15</span><sub>s</sub></button>
+                        <button className='btn bg-white  border-none text-green-500 hover:bg-green-200 btn-sm mx-2 btn-circle'><span>15</span><sub>s</sub></button>
                         <button className='btn bg-white border-none text-green-500 hover:bg-green-200 btn-sm mx-2 btn-circle'><span>15</span><sub>s</sub></button>
                         <button className='btn bg-white border-none text-green-500 hover:bg-green-200 btn-sm mx-2 btn-circle'><span>15</span><sub>s</sub></button>
                         <button className='btn bg-white border-none text-green-500 hover:bg-green-200 btn-sm mx-2 btn-circle'><span>15</span><sub>s</sub></button>
                     </div>
                 </div>
 
+                <div className='mt-8'>
+                    <h2 className='text-sm my-1 text-green-800 font-semibold'>Reading Activities Details</h2>
+                    <div className='bg-green-700 p-2 py-4 hover:bg-green-700 glass rounded-xl font-semibold text-white flex justify-around items-center'>
+                        <h2 className='text-sm'>Reading Time : </h2>
+                        <h5 className='text-sm'><span>200</span> Minutes</h5>
+                    </div>
+                    <div className='bg-green-700 mt-4 p-2 py-4 hover:bg-green-700 glass rounded-xl font-semibold text-white flex justify-around items-center'>
+                        <h2 className='text-sm'>Breaking Time : </h2>
+                        <h5 className='text-sm'><span>100</span> Minutes</h5>
+                    </div>
+                </div>
 
+                <div className='mt-8'>
+                    <button className='btn bg-green-800 glass hover:bg-green-900'>Activities Complete</button>
+                </div>
 
             </div>
         </aside>
